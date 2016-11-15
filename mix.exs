@@ -7,7 +7,12 @@ defmodule Hangman.Mixfile do
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     escript: escript,
      deps: deps()]
+  end
+
+  def escript do
+    [main_module: Hangman]
   end
 
   # Configuration for the OTP application

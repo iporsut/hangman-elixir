@@ -100,7 +100,7 @@ defmodule Hangman do
     end
   end
 
-  def main do
+  def main(_args) do
     word = random_word()
     puzzle = fresh_puzzle(String.downcase(word))
     run_game(puzzle)
